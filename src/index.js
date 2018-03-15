@@ -1,7 +1,7 @@
 const createEnumerableProperty = (a) => {return a;};
 const createNotEnumerableProperty = () => {};
 const createProtoMagicObject = () => {return Function;};
-const incrementor = function(){
+const incrementor = () => {
 	let value = 1;
 	let func = function(){
 		value += 1;

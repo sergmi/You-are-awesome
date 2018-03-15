@@ -29,7 +29,7 @@ const createIncrementer = () => {
 // return same argument not earlier than in one second, and not later, than in two
 const returnBackInSecond = () => {};
 const getDeepPropertiesCount = (obj) => {return (JSON.stringify(obj)).match(/\:/g).length};
-const createSerializedObject = () => {return {"prop":"zero"};};
+const createSerializedObject = () => {return null;};
 const toBuffer = () => {};
 const sortByProto = () => {};
 
@@ -43,4 +43,3 @@ exports.returnBackInSecond = returnBackInSecond;
 exports.getDeepPropertiesCount = getDeepPropertiesCount;
 exports.createSerializedObject = createSerializedObject;
 exports.sortByProto = sortByProto;
-

@@ -1,8 +1,10 @@
 const createEnumerableProperty = (a) => {return a;};
 const createNotEnumerableProperty = () => {};
 const createProtoMagicObject = () => {return Function;};
+
+let value = 0;
 const incrementor = () => {
-	let value = 1;
+	value += 1;
 	function func(){
 		value += 1;
 		return func;
@@ -12,6 +14,7 @@ const incrementor = () => {
 	};
 	return func;
 };
+
 const asyncIncrementor = () => {};
 const createIncrementer = () => {
 	let digits = [1,2,3,4,5,6,7,8,9];
@@ -26,7 +29,7 @@ const createIncrementer = () => {
 // return same argument not earlier than in one second, and not later, than in two
 const returnBackInSecond = () => {};
 const getDeepPropertiesCount = () => {};
-const createSerializedObject = () => {/*return {};*/};
+const createSerializedObject = () => {};
 const toBuffer = () => {};
 const sortByProto = () => {};
 

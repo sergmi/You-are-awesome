@@ -1,8 +1,17 @@
-
 const createEnumerableProperty = (a) => {return a;};
 const createNotEnumerableProperty = () => {};
 const createProtoMagicObject = () => {return Function;};
-const incrementor = () => {};
+const incrementor = function(){
+	let value = 1;
+	let func = function(){
+		value += 1;
+		return func;
+	};
+	func.toString = function(){
+		return value;
+	};
+	return func;
+};
 const asyncIncrementor = () => {};
 const createIncrementer = () => {
 	let digits = [1,2,3,4,5,6,7,8,9];
@@ -20,7 +29,6 @@ const getDeepPropertiesCount = () => {};
 const createSerializedObject = () => {return {};};
 const toBuffer = () => {};
 const sortByProto = () => {};
-
 
 exports.createEnumerableProperty = createEnumerableProperty;
 exports.createNotEnumerableProperty = createNotEnumerableProperty;
